@@ -37,7 +37,7 @@ dvc dag
 # Automatic Installation
 ### Step 1: Docker
 ```
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 # The tests from the modularized scripts are run in the following notebooks
