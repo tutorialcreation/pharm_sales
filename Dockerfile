@@ -19,6 +19,8 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 COPY . /app/
 RUN ls -la /app/
-EXPOSE 5000
 RUN pip3 install -r requirements.txt
-ENTRYPOINT [ "setup.sh" ]
+EXPOSE 80
+
+CMD ["/bin/bash", "-c", "/app/setup.sh"]
+ENTRYPOINT streamlit run app.py
